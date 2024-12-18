@@ -1,101 +1,208 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+import posts from "@/data/post";
+
+export default function Landing() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="flex flex-col h-screen">
+      {/* Header */}
+      <header className="h-[70px] flex items-center justify-between border-b-[1px] px-[50px]">
+        <div className="flex items-center gap-x-[42px]">
+          <Image src="/images/logo.png" width={147} height={52} alt="logo.png" />
+          <div className="flex items-center gap-x-[10px]">
+            <button>
+              <Image
+                src="/icons/search.svg"
+                width={30}
+                height={30}
+                alt="search.png"
+              />
+            </button>
+            <input
+              className="font-inter focus:outline-none"
+              type="text"
+              placeholder="Search"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+        </div>
+        <div className="flex items-center gap-x-[10px]">
+          <h2 className="text-secondary">Have a Risol Day!</h2>
+          <Image
+            src="/icons/profile.svg"
+            width={30}
+            height={30}
+            alt="search.png"
+          />
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex flex-1 px-[173px] justify-between overflow-hidden">
+        <div className="mt-[81px] overflow-scroll example">
+          <div>
+            <h1 className="font-black text-[40px]">Ryu</h1>
+            <div className="flex items-center gap-x-[8px]">
+              <Image
+                src="/icons/pencil.svg"
+                width={24}
+                height={24}
+                alt="search.png"
+              />
+              <h2 className="text-secondary text-[18px]">
+                a.k.a Iyuka, Cyn, Ihsan
+              </h2>
+            </div>
+          </div>
+          <div className="mt-[42px] example flex flex-col gap-y-[36px]">
+            {posts.map((post) => (
+              <Link key={post.id} href={`/detail/${post.id}`}>
+                <div className="w-[858px] flex items-start justify-between pb-[36px] border-b-[2px]">
+                  <div>
+                    <h1 className="font-black text-[30px]">{post.title}</h1>
+                    <p className="mt-[12px] w-[423px] text-secondary text-[18px]">
+                      {post.description}
+                    </p>
+                    <div className="mt-[30px] flex gap-x-[10px] text-secondary">
+                      <Image
+                        src="/icons/calendar.svg"
+                        width={24}
+                        height={24}
+                        alt="calendar"
+                      />
+                      {post.date}
+                    </div>
+                  </div>
+                  <Image
+                    src={post.image}
+                    width={184}
+                    height={146}
+                    alt={post.title}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="relative w-[595px] h-full overflow-hidden example pt-[57px] border-x-[2px]">
+          <div className="pl-[58px]">
+          <div>
+            <Image
+              src="/images/fox.png"
+              width={110}
+              height={119}
+              alt="profile"
+            />
+            <div className="flex items-center gap-x-[12px] mt-[18px]">
+              <h2 className="text-[18px] font-semibold">Ryu</h2>
+              <h2 className="text-[18px] text-secondary">he/him</h2>
+            </div>
+            <p className="mt-[18px] w-[413px]">
+              Writing my heart out. I do graphic design, still learning to draw
+              & code. I play drums sometimes
+            </p>
+          </div>
+          <div className="flex gap-x-[12px] mt-[18px]">
+            <Link href="#">
+              <div className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[15px] py-[9px]">
+                <Image
+                  src="/icons/insta.svg"
+                  width={20}
+                  height={20}
+                  alt="insta"
+                />
+                @ryusolmayo
+              </div>
+            </Link>
+            <Link href="#">
+              <div className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[15px] py-[9px]">
+                <Image
+                  src="/icons/spotify.svg"
+                  width={20}
+                  height={20}
+                  alt="insta"
+                />
+                Iyuka
+              </div>
+            </Link>
+          </div>
+          <div className="mt-[51px]">
+            <h1 className="text-[18px] font-semibold">
+              Some things that i made:
+            </h1>
+            <div className="mt-[18px] flex flex-col gap-y-[54px]">
+              <div>
+                <h1>Jerseys & T-Shirts</h1>
+                <div className="mt-[18px] flex gap-x-[20px]">
+                  <div>
+                    <Image
+                      src="/images/funrunjersey.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/skomdajersey2.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1>Fish Fushion Re-Brand (LKS Wilker 2024)</h1>
+                <div className="mt-[18px] flex gap-x-[20px]">
+                  <div>
+                    <Image
+                      src="/images/page12.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/01.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1>Jerseys & T-Shirts</h1>
+                <div className="mt-[18px] flex gap-x-[20px]">
+                  <div>
+                    <Image
+                      src="/images/funrunjersey.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/skomdajersey2.png"
+                      width={184}
+                      height={146}
+                      alt="jersey"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div className="absolute bottom-0 w-[591px] h-[480px] bg-gradient-to-t from-[#3F3F3F] flex flex-col items-center justify-end">
+            <button className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px]">See Projects Now</button>
+            <p className="text-[13px] text-white mb-[48px]">Design inspired by medium.com</p>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
