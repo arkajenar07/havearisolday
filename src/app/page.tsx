@@ -39,7 +39,7 @@ export default function Landing() {
 
       {/* Main Content */}
       <main className="flex flex-1 px-[173px] justify-between overflow-hidden">
-        <div className="mt-[81px] overflow-scroll example">
+        <div className="mt-[81px] max-w-[858px] flex-grow overflow-scroll example">
           <div>
             <h1 className="font-black text-[40px]">Ryu</h1>
             <div className="flex items-center gap-x-[8px]">
@@ -54,10 +54,10 @@ export default function Landing() {
               </h2>
             </div>
           </div>
-          <div className="mt-[42px] example flex flex-col gap-y-[36px]">
+          <div className="mt-[42px] w-full example flex flex-col items-start gap-y-[36px]">
             {posts.map((post) => (
-              <Link key={post.id} href={`/detail/${post.id}`}>
-                <div className="w-[858px] flex items-start justify-between pb-[36px] border-b-[2px]">
+              <Link className="w-full" key={post.id} href={`/detail/${post.id}`}>
+                <div className="w-full flex items-start justify-between pb-[36px] border-b-[2px]">
                   <div>
                     <h1 className="font-black text-[30px]">{post.title}</h1>
                     <p className="mt-[12px] w-[423px] text-secondary text-[18px]">
@@ -103,7 +103,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="flex gap-x-[12px] mt-[18px]">
-            <Link href="#">
+            <Link href="https://www.instagram.com/ryusolmayo/">
               <div className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[15px] py-[9px]">
                 <Image
                   src="/icons/insta.svg"
@@ -114,7 +114,7 @@ export default function Landing() {
                 @ryusolmayo
               </div>
             </Link>
-            <Link href="#">
+            <Link href="https://open.spotify.com/user/31zgx665pbmbakyabp22yoyklz7m?si=823091f45f404e41">
               <div className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[15px] py-[9px]">
                 <Image
                   src="/icons/spotify.svg"
