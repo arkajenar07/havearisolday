@@ -7,6 +7,7 @@ interface Post {
   image: string;
   author: string;
   article: string[];
+  recipes: string[];
 }
 
 // Array of posts with type annotation
@@ -23,6 +24,9 @@ const posts: Post[] = [
       "Lots in my mind lately, by lots i mean LOTS. I have troubles opening up to people, even my closest friends, i will get used to it though, just matter of time. Oh, have you ever stumbled upon a person who is younger than you, had the same passion as you, but he is more passionate about what they liked or even better than you? Demotivating isn’t it? Makes you think “I should’ve started earlier” “What am i doing with my life all this time?”. I know everyone has their own journey and path but, seeing them better than you is kind of... Yeah, you know exactly what i mean.",
       "Im not great at opening up, and im also not great at telling stories, so pardon if there is some things that seems like a bullshit or just a nonsensical ranting with nothing to hold into.",
       "I think that’s all, hope i can just get through it all."
+    ],
+    recipes: [
+      
     ]
   }
 ];

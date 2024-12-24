@@ -1,31 +1,26 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import posts from "@/data/post";
+import cookings from "@/data/cooking";
+
 
 export default function Landing() {
+  const [activeTab, setActiveTab] = useState("journals");
+
+  const handleTabChange = (tab: "journals" | "cookings") => {
+    setActiveTab(tab)
+  }
+
+  const displayedData = activeTab === "journals" ? posts : cookings;
+  
   return (
     <div className="flex flex-col h-screen">
       {/* Header */}
       <header className="h-[70px] flex items-center justify-between border-b-[1px] px-[50px]">
-        <div className="flex items-center gap-x-[42px]">
-          <Image src="/images/logo.png" width={147} height={52} alt="logo.png" />
-          <div className="flex items-center gap-x-[10px]">
-            <button>
-              <Image
-                src="/icons/search.svg"
-                width={30}
-                height={30}
-                alt="search.png"
-              />
-            </button>
-            <input
-              className="font-inter focus:outline-none"
-              type="text"
-              placeholder="Search"
-            />
-          </div>
-        </div>
+        <Image src="/images/logo.png" width={147} height={52} alt="logo.png" />
         <div className="flex items-center gap-x-[10px]">
           <h2 className="text-secondary">Have a Risol Day!</h2>
           <Image
@@ -55,8 +50,26 @@ export default function Landing() {
             </div>
           </div>
           <div className="mt-[42px] w-full example flex flex-col items-start gap-y-[36px]">
-            {posts.map((post) => (
-              <Link className="w-full" key={post.id} href={`/detail/${post.id}`}>
+            <div className="w-full border-b-2 flex gap-x-[27px]">
+            <button
+                onClick={() => handleTabChange("journals")}
+                className={`pb-[18px] mb-[-2px] ${
+                  activeTab === "journals" ? "border-b-2 border-black" : "border-b-2"
+                }`}
+              >
+                Journals
+              </button>
+              <button
+                onClick={() => handleTabChange("cookings")}
+                className={`pb-[18px] mb-[-2px] ${
+                  activeTab === "cookings" ? "border-b-2 border-black" : "border-b-2"
+                }`}
+              >
+                Cookings
+              </button>
+            </div>
+            {displayedData.map((post) => (
+              <Link className="w-full" key={post.id} href={`/${activeTab}/${post.id}`}>
                 <div className="w-full flex items-start justify-between pb-[36px] border-b-[2px]">
                   <div>
                     <h1 className="font-black text-[30px]">{post.title}</h1>
@@ -73,12 +86,15 @@ export default function Landing() {
                       {post.date}
                     </div>
                   </div>
+                  <div className="overflow-hidden w-[184px] h-[146px] rounded-[3px]">
                   <Image
                     src={post.image}
                     width={184}
                     height={146}
+                    className="w-full h-full object-cover"
                     alt={post.title}
                   />
+                  </div>
                 </div>
               </Link>
             ))}
@@ -198,7 +214,7 @@ export default function Landing() {
           </div>
           </div>
           <div className="absolute bottom-0 w-[591px] h-[480px] bg-gradient-to-t from-[#3F3F3F] flex flex-col items-center justify-end">
-            <button className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px]">See Projects Now</button>
+            <Link href="/projects" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px]">See Projects Now</Link>
             <p className="text-[13px] text-white mb-[48px]">Design inspired by medium.com</p>
           </div>
         </div>
