@@ -24,48 +24,6 @@ const posts: Post[] = [
       "Im not great at opening up, and im also not great at telling stories, so pardon if there is some things that seems like a bullshit or just a nonsensical ranting with nothing to hold into.",
       "I think that’s all, hope i can just get through it all."
     ]
-  },
-  {
-    id: 2,
-    title: "Who will I talk to?",
-    description: "Boring, hobbies? Nah, abandoned it long ago.",
-    date: "Sep 3",
-    image: "/images/kucing-ikan.png",
-    author: "Ryu",
-    article: [
-      "Loneliness creeps in when you least expect it, making each day feel longer than the last.",
-      "The hobbies I once loved now feel distant, like relics of a past life.",
-      "I often find myself yearning for meaningful conversations and connections.",
-      "Perhaps, one day, I will rediscover the spark that brings joy to my passions."
-    ]
-  },
-  {
-    id: 3,
-    title: "Musim hujan datang",
-    description: "dInngGGGiIiiiiIIInnNNNNNnnNNNNn",
-    date: "Sep 1",
-    image: "/images/kucing-merah.png",
-    author: "Ryu",
-    article: [
-      "The rainy season is finally here, bringing with it a chill that seeps into the bones.",
-      "Raindrops tapping on the window feel like a melancholic symphony.",
-      "With every downpour, memories of rainy days past flood my mind.",
-      "Despite the gloom, there is something comforting about the rhythm of the rain."
-    ]
-  },
-  {
-    id: 4,
-    title: "Silly Gong gong gong gong-",
-    description: "Me being silly:",
-    date: "Oct 27",
-    image: "/images/wle.png",
-    author: "Ryu",
-    article: [
-      "Sometimes life just needs a little silliness to keep things light.",
-      "Laughter is a remedy that works wonders for the soul.",
-      "Embracing my goofy side reminds me not to take everything too seriously.",
-      "In these moments of playfulness, I find a sense of freedom and joy."
-    ]
   }
 ];
 
