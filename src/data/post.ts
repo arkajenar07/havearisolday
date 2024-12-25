@@ -14,9 +14,27 @@ interface Post {
 const posts: Post[] = [
   {
     id: 1,
+    title: "Who will i talk to?",
+    description: "Boring, hobbies? nah, abandoned it long ago.",
+    date: "Dec 25",
+    image: "/images/kucing-ikan.png",
+    author: "Ryu",
+    article: [
+      "I don’t even understand why, i was talkative before, i have many friends yet i can’t really talk all my heart out to them. It felt bizarre you know? I feel empty, not in some shit corny ways but, i really feel empty.",
+      "I guess this is just my bad habit of not wanting to talk to people near me, everything is getting better though, did exercise every day and started to cook again even though I have to start all over again but i think it’s the beauty of it: learning everything again and enjoy the process.",
+      "I also started learning to draw, for my future u know? i wanna go DKV but I feel like it's too hard for me. I've got this scholarship to Japan, but I’m not really sure if I want to go there or not. I can’t leave my family behind because i’ll miss them so much.",
+      "Next year will be my year, i’ve learned a lot this year and i’ll use the lesson for me to get better, aamiin.",
+      "Hope future me will always be happy... always."
+    ],
+    recipes: [
+
+    ]
+  },
+  {
+    id: 2,
     title: "My life lately",
     description: "Will i survive? will i enjoy the life? only god knows. I just hope i can get through it all.",
-    date: "Sep 8",
+    date: "Nov 18",
     image: "/images/kucing-kotak.png",
     author: "Ryu",
     article: [
@@ -28,7 +46,7 @@ const posts: Post[] = [
     recipes: [
 
     ]
-  }
+  },
 ];
 
 export default posts;

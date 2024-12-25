@@ -15,8 +15,8 @@ const cookings: Cooking[] = [
   {
     id: 1,
     title: "Simple Omelette",
-    description: "Let me cook",
-    date: "Sep 8",
+    description: "Indomie omelette, simple, what could go wrong?",
+    date: "Dec 2",
     image: "/images/omelette.png",
     author: "Ryu",
     article: [
