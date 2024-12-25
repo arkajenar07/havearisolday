@@ -15,7 +15,7 @@ const posts: Post[] = [
   {
     id: 1,
     title: "My life lately",
-    description: "Will I survive? Will I enjoy the life? Only God knows. I just hope I can get through it all.",
+    description: "Will i survive? will i enjoy the life? only god knows. I just hope i can get through it all.",
     date: "Sep 8",
     image: "/images/kucing-kotak.png",
     author: "Ryu",
@@ -26,7 +26,7 @@ const posts: Post[] = [
       "I think that’s all, hope i can just get through it all."
     ],
     recipes: [
-      
+
     ]
   }
 ];
