@@ -79,7 +79,7 @@ export default function PostDetail() {
           </div>
         </div>
         <div className="flex items-start gap-x-[30px] py-[52px]">
-          <Link href="">
+          <Link href="/">
           <Image src="/images/fox.png" width={64} height={64} alt='fox'></Image>
           </Link>     
           <div className='flex flex-col items-start'>
