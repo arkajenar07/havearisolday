@@ -219,7 +219,7 @@ const displayedData =
                 </div>
                 <div className="absolute bottom-0 w-full h-[480px] bg-gradient-to-t from-[#3F3F3F] flex flex-col items-center justify-end flex-grow px-[24px]">
                     <Link href="/projects" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[40px] text-[13px]">See Projects Now</Link>
-                    <p className="text-[13px] text-white mb-[22px] text-center">Have a Risol Day! - Design inspired by medium.com & name by haveatomatoday</p>
+                    <p className="text-[13px] text-white mb-[22px] text-center">Have a Risol Day! - Design inspired by medium.com<br/> & name by haveatomatoday</p>
                 </div>
               </div>
             ) : (
@@ -378,7 +378,7 @@ const displayedData =
           </div>
           <div className="absolute bottom-0 w-full h-[480px] bg-gradient-to-t from-[#3F3F3F] flex flex-col items-center justify-end flex-grow px-[24px]">
             <Link href="/projects" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px]">See Projects Now</Link>
-            <p className="text-[13px] text-white mb-[48px] text-center">Have a Risol Day! - Design inspired by medium.com & name by haveatomatoday</p>
+            <p className="text-[13px] text-white mb-[48px] text-center">Have a Risol Day! - Design inspired by medium.com <br/>& name by haveatomatoday</p>
           </div>
         </div>
       </main>

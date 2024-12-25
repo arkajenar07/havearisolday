@@ -102,7 +102,7 @@ export default function PostDetail() {
         </div>
       </div>
       <footer className="flex justify-center items-center h-[70px] text-secondary sm:text-[15px] text-[11px] border-t-2 sm:px-0 px-[73px] text-center">
-        Have a Risol Day! - Design inspired by medium.com & name by haveatomatoday
+        Have a Risol Day! - Design inspired by medium.com<br/> & name by haveatomatoday
       </footer>
     </div>
   );
