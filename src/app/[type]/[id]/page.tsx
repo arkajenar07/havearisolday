@@ -47,9 +47,9 @@ export default function PostDetail() {
         </div>
         <div className="mt-[31px] sm:mt-[35px] md:mt-[42px] lg:mt-[48px] xl:mt-[52px] w-full flex flex-col items-center">
           <h1 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-black mb-[31px] sm:mb-[35px] md:mb-[42px] lg:mb-[48px] xl:mb-[52px] ">{data.title}</h1>
-          <div className="w-full h-[226px] sm:h-[256px] md:h-[312px] lg:h-[368px] xl:h-[400px] 2xl:h-[432px] overflow-hidden rounded-[2px]">
+          <div className="w-full h-[226px] sm:h-[256px] md:h-[312px] lg:h-[368px] xl:h-[400px] 2xl:h-[432px] overflow-hidden rounded-[2px] pt-[-100px]">
             <Image
-              className="mt-[px] w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top"
               src={data.image}
               width={838}
               height={432}
@@ -89,15 +89,11 @@ export default function PostDetail() {
               />
               {data.date}, 2024
             </div>
-            <Link href="#">
-              <div className="mt-[19px] bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[15px] py-[9px]">
-                See More From Ryu
-              </div>
-            </Link>
+            <Link href="/" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px] sm:text-[18px] text-[10px]">See More From Ryu</Link>
           </div>
         </div>
       </div>
-      <footer className="flex justify-center items-center h-[70px] text-secondary text-[15px] sm:text-[11px] border-t-2 sm:px-0 px-[73px] text-center">
+      <footer className="flex justify-center items-center h-[70px] text-secondary sm:text-[15px] text-[11px] border-t-2 sm:px-0 px-[73px] text-center">
         Have a Risol Day! - Design inspired by medium.com & name by haveatomatoday
       </footer>
     </div>
