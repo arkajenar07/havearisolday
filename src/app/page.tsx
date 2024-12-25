@@ -104,7 +104,7 @@ const displayedData =
             </div>
           </div>
           <div className="mt-[42px] w-full example flex flex-col items-start gap-y-[36px]">
-            <div className="w-full border-b-2 flex gap-x-[27px] sm:mx-[96px] mx-[20px]">
+            <div className="w-full border-b-2 flex gap-x-[27px] lg:mx-0 sm:mx-[96px] mx-[20px]">
               <button
                 onClick={() => handleTabChange("journals")}
                 className={`sm:pb-[18px] pb-[14px] mb-[-2px] sm:text-[18px] text-[13px] ${
@@ -224,7 +224,7 @@ const displayedData =
               </div>
             ) : (
               displayedData?.map((post) => (
-                <Link className="w-full sm:px-[96px] px-[20px]" key={post.id} href={`/${activeTab}/${post.id}`}>
+                <Link className="w-full lg:px-0 sm:px-[96px] px-[20px]" key={post.id} href={`/${activeTab}/${post.id}`}>
                   <div className="w-full flex items-start justify-between xl:pb-[36px] pb-[27px] border-b-[2px]">
                     <div>
                       <h1 className="font-bold xl:text-[30px] sm:text-[24px] text-[17px]">{post.title}</h1>
