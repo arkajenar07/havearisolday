@@ -30,7 +30,7 @@ export default function Landing() {
         <Link href="/" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px] sm:text-[18px] text-[10px]">Click Here To Go Back</Link>
       </main>
       {/* Footer */}
-      <footer className="flex justify-center items-center h-[70px] text-secondary sm:text-[15px] text-[11px] border-t-2 sm:px-0 px-[73px] text-center">
+      <footer className="flex justify-center items-center h-[70px] text-secondary sm:text-[15px] text-[11px] border-t-2 sm:px-0 px-[24px] text-center">
         Have a Risol Day! - Design inspired by medium.com & name by haveatomatoday
       </footer>
     </div>
