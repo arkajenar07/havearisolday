@@ -17,7 +17,7 @@ const posts: Post[] = [
     title: "My life lately",
     description: "Will i survive? will i enjoy the life? only god knows. I just hope i can get through it all.",
     date: "Sep 8",
-    image: "/images/kucing-kotak.png",
+    image: "/images/kucing-kotak.jpg",
     author: "Ryu",
     article: [
       "Have you ever felt like your life is boring? have u ever thought about not even wanting to live anymore? have you ever thought about that you were born for nothing like, at all? Well, that’s what i thought lately. Losing someone you love deeply is not so great after all. Plus, final test is coming soon, i don’t even know if im ready or not to even finish the first test.",

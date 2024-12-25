@@ -245,8 +245,8 @@ const displayedData =
                     <div className="overflow-hidden sm:w-[184px] sm:h-[146px] w-[105px] h-[87px] rounded-[3px]">
                       <Image
                         src={post.image}
-                        width={184}
-                        height={146}
+                        width={660}
+                        height={743}
                         className="w-full h-full object-cover"
                         alt={post.title}
                       />

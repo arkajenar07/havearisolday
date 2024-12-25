@@ -49,7 +49,7 @@ export default function PostDetail() {
           <h1 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-black mb-[31px] sm:mb-[35px] md:mb-[42px] lg:mb-[48px] xl:mb-[52px] ">{data.title}</h1>
           <div className="w-full h-[226px] sm:h-[256px] md:h-[312px] lg:h-[368px] xl:h-[400px] 2xl:h-[432px] overflow-hidden rounded-[2px]">
             <Image
-              className="mt-[px] w-full h-full object-cover"
+              className="mt-[px] w-full h-full object-cover object-top"
               src={data.image}
               width={838}
               height={432}
