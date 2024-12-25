@@ -39,8 +39,8 @@ const displayedData =
       </header>
 
       {/* Main Content */}
-      <main className="flex flex-1 2xl:px-[173px] sm:px-[96px] justify-between overflow-hidden xl:gap-x-[48px] gap-x-[24px]">
-        <div className="md:mt-[81px] sm:mt-[48px] mt-[27px]  max-w-[858px] flex-grow overflow-scroll example">
+      <main className="flex flex-1 2xl:px-[173px] lg:px-[96px] justify-between overflow-hidden xl:gap-x-[48px] gap-x-[24px]">
+        <div className="md:mt-[81px] sm:mt-[48px] mt-[27px] lg:max-w-[858px]  flex-grow overflow-scroll example">
           <div className="lg:block hidden">
             <h1 className="font-black text-[40px]">Ryu</h1>
             <div className="flex items-center gap-x-[8px]">
@@ -55,7 +55,7 @@ const displayedData =
               </h2>
             </div>
           </div>
-          <div className="lg:hidden flex items-start xs:gap-x-[32px] gap-x-[16px] sm:px-0 px-[20px]">
+          <div className="lg:hidden flex items-start xs:gap-x-[32px] gap-x-[16px] sm:px-[96px] px-[20px]">
             <Image
               src="/images/fox.png"
               width={110}
@@ -104,7 +104,7 @@ const displayedData =
             </div>
           </div>
           <div className="mt-[42px] w-full example flex flex-col items-start gap-y-[36px]">
-            <div className="w-full border-b-2 flex gap-x-[27px] sm:mx-0 mx-[20px]">
+            <div className="w-full border-b-2 flex gap-x-[27px] sm:mx-[96px] mx-[20px]">
               <button
                 onClick={() => handleTabChange("journals")}
                 className={`sm:pb-[18px] pb-[14px] mb-[-2px] sm:text-[18px] text-[13px] ${
@@ -131,8 +131,8 @@ const displayedData =
               </button>
             </div>
             {activeTab === "projects" ? (
-              <div className="lg:hidden relative w-full mx-[-10] flex justify-center items-center">
-                <div className="w-full h-full overflow-hidden example flex-grow sm:px-0 px-[20px]">
+              <div className="lg:hidden relative w-full flex justify-center items-center">
+                <div className="w-full h-full overflow-hidden example flex-grow sm:px-[96px] px-[20px]">
                     <h1 className="text-[18px] font-semibold">
                       Some things that i made:
                     </h1>
@@ -224,8 +224,8 @@ const displayedData =
               </div>
             ) : (
               displayedData?.map((post) => (
-                <Link className="w-full" key={post.id} href={`/${activeTab}/${post.id}`}>
-                  <div className="w-full flex items-start justify-between xl:pb-[36px] pb-[27px] border-b-[2px] sm:px-0 px-[20px]">
+                <Link className="w-full sm:px-[96px] px-[20px]" key={post.id} href={`/${activeTab}/${post.id}`}>
+                  <div className="w-full flex items-start justify-between xl:pb-[36px] pb-[27px] border-b-[2px]">
                     <div>
                       <h1 className="font-bold xl:text-[30px] sm:text-[24px] text-[17px]">{post.title}</h1>
                       <p className="sm:mt-[12px] mt-[8px] xl:w-[423px] sm:w-[320px] w-[240px] text-secondary xl:text-[18px] sm:text-[14px] text-[11px]">
