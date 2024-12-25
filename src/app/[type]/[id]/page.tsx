@@ -78,7 +78,7 @@ export default function PostDetail() {
             <p className="text-[15px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] text-justify font-light text-[#000000]">~{data.author}</p>
           </div>
         </div>
-        <div className="flex items-start gap-x-[30px] py-[52px]">
+        <div className="flex items-start sm:gap-x-[30px] gap-[15px] py-[52px]">
           <Link href="/">
           <Image src="/images/fox.png" width={64} height={64} alt='fox'></Image>
           </Link>     
@@ -97,7 +97,7 @@ export default function PostDetail() {
               />
               {data.date}, 2024
             </div>
-            <Link href="/" className="bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px] sm:text-[18px] text-[10px]">See More From Ryu</Link>
+            <Link href="/" className="sm:mt-[18px] mt-[9px] bg-primary-btn flex items-center rounded-full gap-x-[6px] px-[22px] py-[9px] mb-[55px] sm:text-[18px] text-[10px]">See More From Ryu</Link>
           </div>
         </div>
       </div>
