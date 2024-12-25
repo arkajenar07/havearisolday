@@ -39,9 +39,13 @@ export default function PostDetail() {
       </header>
       <div className='px-[20px] sm:px-[100px] md:px-[200px] lg:px-[300px] xl:px-[400px] 2xl:px-[541px]  w-full'>
         <div className="flex items-center md:gap-x-[30px] gap-x-[16px]  py-[52px] border-b-2">
-          <Image src="/images/fox.png" width={64} height={64} alt='fox' className="w-[64px]"></Image>
+          <Link href="/">
+            <Image src="/images/fox.png" width={64} height={64} alt='fox' className="w-[64px]"></Image>
+          </Link>
           <div>
+            <Link href="/">
             <h1 className="w-[18px] font-semibold">Ryu</h1>
+            </Link>
             <p className="text-secondary">2 min read - Sep 8, 2024</p>
           </div>
         </div>
@@ -75,9 +79,13 @@ export default function PostDetail() {
           </div>
         </div>
         <div className="flex items-start gap-x-[30px] py-[52px]">
+          <Link href="">
           <Image src="/images/fox.png" width={64} height={64} alt='fox'></Image>
+          </Link>     
           <div className='flex flex-col items-start'>
-            <h1 className="font-semibold">Written by {data.author}</h1>
+            <Link href="/">
+              <h1 className="font-semibold">Written by {data.author}</h1>
+            </Link>
             <p className="max-w-[413px] text-secondary">Writing my heart out. I do graphic design, still
               learning to draw & code. I play drums sometimes</p>
             <div className="mt-[16px] flex gap-x-[10px] text-secondary">
